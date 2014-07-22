@@ -3,9 +3,6 @@ require 'sinatra/base'
 
 class Lucas < Sinatra::Base
   get '/' do
-    @test = 'Hello!'
     erb :index
   end
 end
-
-Lucas.run!
