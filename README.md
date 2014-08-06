@@ -1,1 +1,1 @@
-My personal website
+Simple personal website built with Sinatra.
