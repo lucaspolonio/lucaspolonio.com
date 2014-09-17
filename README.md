@@ -1,1 +1,1 @@
-Simple personal website built with Sinatra.
+Personal website built with Sinatra, AngularJS and Karma.
