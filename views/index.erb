@@ -6,12 +6,17 @@
     <title>Lucas Polonio</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,500' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="main.css">
+
+    <script src="js/vendor/angular.min.js"></script>
+    <script src="js/vendor/angular-mocks.js"></script>
+    <script src="js/cvApp.js"></script>
   </head>
   <body>
-    <div class="container">
+    <div class="container" ng-app="cvApp">
       <div class="row">
         <div class="col-md-offset-2 col-md-6">
           <div class="top-spacing hidden-xs">
@@ -22,6 +27,17 @@
           <div class="profession">
             web developer
           </div>
+            <div class="icons">
+              <a href="http://www.github.com/lucaspolonio" target="_blank">
+                <img src="/github-icon.png" height="28" alt="GitHub">
+              </a>
+              <a href="http://stackoverflow.com/users/2840867/lucas-polonio" target="_blank">
+                <img src="/stackoverflow-icon.png" height="34" alt="stackoverflow">
+              </a>
+              <a href="http://ca.linkedin.com/pub/lucas-polonio/49/b21/534" target="_blank">
+                <img src="/linkedin-icon.png" height="30" alt="Linkedin">
+              </a>
+            </div>
           <div class="description">
             <p>
               Toronto-based web/mobile developer.
@@ -32,22 +48,37 @@
               Currently working remotely for the Brazilian Ministry of Education, I have worked for large, medium and small sized companies as a developer and small teams leader.
             </p>
             <p>
-              I am currently looking for a full-time job in Toronto, as I recently moved here from Brazil. If you'd like to know more about me check out my GitHub, stackoverflow and LinkedIn profiles.
+              If you'd like to know more about me check out my
+              <a href="http://www.github.com/lucaspolonio">GitHub</a>,
+              <a href="http://stackoverflow.com/users/2840867/lucas-polonio">stackoverflow</a> and
+              <a href="http://ca.linkedin.com/pub/lucas-polonio/49/b21/534">LinkedIn</a>
+              profiles. Also, here's a timeline of my related experiences:
             </p>
-            <div class="icons">
-              <a href="http://www.github.com/lucaspolonio" target="_blank">
-                <img src="/github-icon.png" height="28" alt="GitHub">
-              </a>
-              <a href="http://stackoverflow.com/users/2840867/lucas-polonio" target="_blank">
-                <img src="/stackoverflow-icon.png" height="34" alt="stackoverflow">
-              </a>
-              <a href="http://br.linkedin.com/pub/lucas-polonio/49/b21/534" target="_blank">
-                <img src="/linkedin-icon.png" height="30" alt="Linkedin">
-              </a>
+
+            <div ng-controller="timelineController" class="timeline">
+              <span class="spacer">&nbsp;</span>
+              <div ng-repeat="year in [2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014]" class="year">{{year}}</div>
+
+              <div ng-repeat="skill in timeline_data" ng-class="($index%2)?'skill_even':'skill_odd'">
+                <div class="title">{{skill['name']}}</div>
+                <div ng-repeat="year in skill['dates'] track by $index">
+                  <span ng-repeat="month in year track by $index" >
+                    <div ng-class="(month)? (($parent.$parent.$index%2)?'fill_even':'fill_odd') : 'empty' "></div>
+                  </span >
+                </div>
+              </div>
             </div>
+
+            <div class="row">
+              <div class="col-md-12 worth_mentioning">
+                <p>Also worth mentioning: Postgresql, MySQL, MongoDB, Heroku, Amazon AWS, HTML5, CSS3, Git</p>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
+
     </div>
   </body>
 </html>

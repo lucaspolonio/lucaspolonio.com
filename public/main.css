@@ -5,7 +5,7 @@ body {
 }
 
 .top-spacing {
-  margin-top: 100px;
+  margin-top: 80px;
 }
 
 .name {
@@ -30,4 +30,66 @@ body {
 
 .icons {
   margin-top: 20px;
+}
+
+
+
+
+.timeline{
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+.timeline .spacer{
+  width: 110px;
+  float:left;
+}
+
+.timeline .year{
+  font-size: 10px;
+  width: 6.6%;
+  float: left;
+}
+
+.timeline .skill_even{
+  width: 100%;
+  float: left;
+  height: 18px;
+  background-color: #ededed;
+}
+.timeline .skill_odd{
+  width: 100%;
+  float: left;
+  height: 18px;
+}
+
+.timeline .title{
+  width: 100px;
+  float: left;
+  margin-right: 10px;
+}
+
+.timeline .fill_even {
+  width: 0.56%;
+  height: 14px;
+  background-color: #427EB3;
+  float: left;
+}
+
+.timeline .fill_odd {
+  width: 0.56%;
+  height: 14px;
+  background-color: #2a617f;
+  float: left;
+}
+
+.timeline .empty {
+  width: 0.56%;
+  height: 14px;
+  float: left;
+}
+
+.worth_mentioning{
+  margin-top: 5px;
+  font-size: 13px;
 }
