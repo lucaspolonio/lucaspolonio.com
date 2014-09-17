@@ -58,7 +58,8 @@
             <div ng-controller="timelineController" class="timeline">
               <span class="spacer">&nbsp;</span>
               <div class="year_container">
-                <div ng-repeat="year in ['\'03','\'04','\'05','\'06','\'07','\'08','\'09','\'10','\'11','\'12','\'13','\'14']" class="year">{{year}}</div>
+                <div ng-repeat="year in ['\'03','\'04','\'05','\'06','\'07','\'08','\'09','\'10','\'11','\'12','\'13','\'14']" class="year hidden-sm hidden-xs">{{year}}</div>
+                <div class="year hidden-md hidden-lg">2003...2014</div>
               </div>
 
               <div ng-repeat="skill in timeline_data" ng-class="($index%2)?'skill_even':'skill_odd'">
