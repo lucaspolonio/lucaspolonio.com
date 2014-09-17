@@ -41,13 +41,17 @@ body {
 }
 
 .timeline .spacer{
-  width: 110px;
+  width: 115px;
   float:left;
+}
+
+.timeline .year_container{
+  width: 100%;
 }
 
 .timeline .year{
   font-size: 10px;
-  width: 6.6%;
+  width: 5.6%;
   float: left;
 }
 
@@ -55,12 +59,14 @@ body {
   width: 100%;
   float: left;
   height: 18px;
-  background-color: #ededed;
+  font-size: 13px;
+  background: linear-gradient(to left, #F5F5F5 20%, #ededed 0%);
 }
 .timeline .skill_odd{
   width: 100%;
   float: left;
   height: 18px;
+  font-size: 13px;
 }
 
 .timeline .title{
@@ -69,22 +75,26 @@ body {
   margin-right: 10px;
 }
 
+.timeline .skill_years{
+  width: 100%;
+}
+
 .timeline .fill_even {
-  width: 0.56%;
+  width: 0.48%;
   height: 14px;
   background-color: #427EB3;
   float: left;
 }
 
 .timeline .fill_odd {
-  width: 0.56%;
+  width: 0.48%;
   height: 14px;
   background-color: #2a617f;
   float: left;
 }
 
 .timeline .empty {
-  width: 0.56%;
+  width: 0.48%;
   height: 14px;
   float: left;
 }

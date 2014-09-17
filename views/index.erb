@@ -57,23 +57,27 @@
 
             <div ng-controller="timelineController" class="timeline">
               <span class="spacer">&nbsp;</span>
-              <div ng-repeat="year in [2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014]" class="year">{{year}}</div>
+              <div class="year_container">
+                <div ng-repeat="year in ['\'03','\'04','\'05','\'06','\'07','\'08','\'09','\'10','\'11','\'12','\'13','\'14']" class="year">{{year}}</div>
+              </div>
 
               <div ng-repeat="skill in timeline_data" ng-class="($index%2)?'skill_even':'skill_odd'">
                 <div class="title">{{skill['name']}}</div>
-                <div ng-repeat="year in skill['dates'] track by $index">
-                  <span ng-repeat="month in year track by $index" >
-                    <div ng-class="(month)? (($parent.$parent.$index%2)?'fill_even':'fill_odd') : 'empty' "></div>
-                  </span >
+                <div class="skill_years">
+                  <div ng-repeat="year in skill['dates'] track by $index">
+                    <span ng-repeat="month in year track by $index" >
+                      <div ng-class="(month)? (($parent.$parent.$index%2)?'fill_even':'fill_odd') : 'empty' "></div>
+                    </span >
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div class="row">
+            <!-- <div class="row">
               <div class="col-md-12 worth_mentioning">
                 <p>Also worth mentioning: Postgresql, MySQL, MongoDB, Heroku, Amazon AWS, HTML5, CSS3, Git</p>
               </div>
-            </div>
+            </div> -->
 
           </div>
         </div>
