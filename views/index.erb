@@ -7,16 +7,23 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">    
     <link href='http://fonts.googleapis.com/css?family=Roboto:300,500' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="main.css">
 
     <script src="js/vendor/angular.min.js"></script>
     <script src="js/vendor/angular-mocks.js"></script>
+    <script src="js/vendor/google-charts-timeline.js"></script>
+    
     <script src="js/cvApp.js"></script>
+    <script src="js/controllers/timeline.js"></script>
+    <script src="js/directives/resize-with-window.js"></script>
+    <script src="js/directives/timeline-chart.js"></script>
+
   </head>
   <body>
-    <div class="container" ng-app="cvApp">
+    <div class="container" ng-app="cvApp" ng-controller="timelineController" >
       <div class="row">
         <div class="col-md-offset-2 col-md-6">
           <div class="top-spacing hidden-xs">
@@ -41,43 +48,26 @@
           <div class="description">
             <p>
               Toronto-based web/mobile developer.
-              I’ve been working with several back-end and front-end technologies for the past years.
-              Today I have a special love for Ruby on Rails and AngularJS, along with TDD.
+              I started coding when I was 13 and I haven't stopped since then.
             </p>
             <p>
-              Currently working remotely for the Brazilian Ministry of Education, I have worked for large, medium and small sized companies as a developer and small teams leader.
+              I’ve been working with several back-end and front-end technologies for the past years.
+              Today I have a special love for Ruby on Rails and AngularJS, along with TDD.
+              I'm currently working remotely for the Brazilian Ministry of Education.
             </p>
             <p>
               If you'd like to know more about me check out my
               <a href="http://www.github.com/lucaspolonio">GitHub</a>,
               <a href="http://stackoverflow.com/users/2840867/lucas-polonio">stackoverflow</a> and
               <a href="http://ca.linkedin.com/pub/lucas-polonio/49/b21/534">LinkedIn</a>
-              profiles. <!-- Also, here's a timeline of my related experiences: -->
+              profiles. Also, here's a timeline of my professional experiences by skill:
             </p>
-<!-- 
-            <div ng-controller="timelineController" class="timeline">
-              <span class="spacer">&nbsp;</span>
-              <div class="year_container">
-                <div ng-repeat="year in ['\'03','\'04','\'05','\'06','\'07','\'08','\'09','\'10','\'11','\'12','\'13','\'14']" class="year hidden-sm hidden-xs">{{year}}</div>
-                <div class="year hidden-md hidden-lg">2003...2014</div>
-              </div>
 
-              <div ng-repeat="skill in timeline_data" ng-class="($index%2)?'skill_even':'skill_odd'">
-                <div class="title">{{skill['name']}}</div>
-                <div class="skill_years">
-                  <div ng-repeat="year in skill['dates'] track by $index">
-                    <span ng-repeat="month in year track by $index" >
-                      <div ng-class="(month)? (($parent.$parent.$index%2)?'fill_even':'fill_odd') : 'empty' "></div>
-                    </span >
-                  </div>
-                </div>
-              </div>
-            </div>
+            <div ng-timeline-chart ng-resize-with-window class="skills_chart"></div>
 
             <div class="worth_mentioning">
-                <p>And more: Postgresql, MySQL, MongoDB, Heroku, Amazon AWS, HTML5, CSS3, Git...</p>
+              More skills worth mentioning: RSpec, Jasmine, Postgresql, MySQL, MongoDB, Redis, Heroku, AWS, HTML5, CSS3, Git and more.
             </div>
- -->
 
           </div>
         </div>

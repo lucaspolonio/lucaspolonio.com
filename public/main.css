@@ -5,7 +5,7 @@ body {
 }
 
 .top-spacing {
-  margin-top: 80px;
+  margin-top: 60px;
 }
 
 .name {
@@ -32,76 +32,16 @@ body {
   margin-top: 20px;
 }
 
-
-
-
-.timeline{
-  margin-top: 20px;
-  font-weight: 500;
-}
-
-.timeline .spacer{
-  width: 115px;
-  float:left;
-}
-
-.timeline .year_container{
-  width: 100%;
-}
-
-.timeline .year{
-  font-size: 10px;
-  width: 5.6%;
-  float: left;
-}
-
-.timeline .skill_even{
-  width: 100%;
-  float: left;
-  height: 18px;
-  font-size: 13px;
-  background: linear-gradient(to left, #F5F5F5 20%, #ededed 0%);
-}
-.timeline .skill_odd{
-  width: 100%;
-  float: left;
-  height: 18px;
-  font-size: 13px;
-}
-
-.timeline .title{
-  width: 100px;
-  float: left;
-  margin-right: 10px;
-}
-
-.timeline .skill_years{
-  width: 100%;
-}
-
-.timeline .fill_even {
-  width: 0.48%;
-  height: 14px;
-  background-color: #427EB3;
-  float: left;
-}
-
-.timeline .fill_odd {
-  width: 0.48%;
-  height: 14px;
-  background-color: #2a617f;
-  float: left;
-}
-
-.timeline .empty {
-  width: 0.48%;
-  height: 14px;
-  float: left;
-}
-
 .worth_mentioning{
-  display: table;
   font-size: 12px;
   margin-bottom: 20px;
-  margin-top: 200px;
+}
+
+.skills_chart{
+  margin-top: 15px;
+}
+
+/* google charts hack for customisation */
+path {
+  stroke-width: 0px;
 }
